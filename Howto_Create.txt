@@ -1,0 +1,9 @@
+To create a language dll for MLCad from scratch load this project into your
+visual studio (>= 6.0) and translate text from english to your language in
+all string tables, dialogs and menus.
+
+Then compile the dll and replace the XXXX by the name of your language.
+
+If you are ready with translation, inform support@lm-software.com that you
+have this dll ready, if you want that your dll is listed at 
+http://www.lm-software.com/mlcad

@@ -1,0 +1,99 @@
+To upgrade your language dll from a certain version to the actual one, find the
+first upgrade from your version to a newer one, and follow all the steps till the
+end of the document.
+
+Upgrade vom MLCad V3.00 to V3.10
+================================
+
+- Copy checkbox "Old style comment or meta command" [IDC_META_COMMAND] from
+  dialog template IDD_DIALOG_NEW_COMMENT, to your implementation and change the
+  text to your language.
+
+- In the dialog IDD_DIALOG_SELPART in your translation of "Custom part" insert a & character
+  bevore the first character of this text. You should see the first character underlined in the
+  dialog - this is a new hotkey for this function to be used as ALT + <key>.
+
+- In the dialog IDD_DIALOG_BUFEXCHG make the EXPANDED combobox size higher than now (150 instead of 40).
+  This is to initialy display all available buffers
+
+- Delete IDR_MAINFRAME from your Accelerator resource, copy that from the template
+  project and insert it into your project.
+
+- ADD a hotkey to your project for SHIFT+CTRL+S which should activate ID_FILE_SAVEPICTURES
+
+- Copy bitmap IDB_ARROW_ICON to your resource project
+
+- Copy bitmap IDB_BITMAP_PLATE to your resource project
+
+- Remove bitmap IDB_BITMAP_STATES from your project and copy template bitmap IDB_BITMAP_STATES 
+  to your resource project
+
+- Remove toolbar IDR_TOOLBAR_EXPERT from your project and copy template toolbar IDR_TOOLBAR_EXPERT 
+  to your resource project
+
+- Remove toolbar IDR_TOOLBAR_EXTRAS from your project and copy template toolbar IDR_TOOLBAR_EXTRAS 
+  to your resource project
+
+- Copy dialog IDD_ARROW_GENERATOR to your resource project
+
+- Copy IDD_DIALOG_ADDLSYNTH to your resource project and translate the dialog items
+  The items of the list box are read from the MLCad.ini file!
+
+- Copy IDD_PLATE_GENERATOR to your resource project and translate the dialog items.
+
+- Copy the "Arrow..." entry from the menu IDR_MAINFRAME inside (Extras/Generators)
+
+- Copy the "Plate..." entry from the menu IDR_MAINFRAME inside (Extras/Generators)
+
+- Copy the submenu LSynth with it's childs from the Extras menu and paste it to the
+  corresponding menu of your resource - then translate the menu points.
+
+- Copy the strings IDS_ERROR_LSYNTH_CONFIG, IDS_ERROR_LSYNTH_EXECUTE, IDS_ERROR_NOTEMP and
+  IDS_ERROR_RECOVER from the String Table of the template project to your project and
+  translate them.
+
+- Change the resource string IDS_LANGUAGEVERSION in your project to V1.2 - this is importand
+  otherwice MLCad will refuse to load this dll!
+
+- Check the differences of resource.h from template project and your file.
+  If in question it is wise to copy this file from the template to your project.
+
+- Build the project and test it.
+
+Upgrade vom MLCad V3.10/V3.11 to V3.20
+======================================
+
+- Copy accelerators ID_SETTINGS_GRID_MEDIUM, ID_SETTINGS_GRID_FINE and ID_SETTINGS_GRID_COARSE
+  from the template project to your project.
+
+- Add a hotkey hint to the menu-entries of Settings/Grid (e.g. [F9] to Grid fine).
+
+- Copy IDS_REPORT_FILTER, IDS_MSG_NONEWPARTS and IDS_VIEWNAMES from the string table of the template project and insert it into
+  your project. Then translate it (note do not change the extensions e,g, *.csv!).
+
+- Copy button "Swap" from the dialog IDD_DIALOG_PRIMITIVE of the template project,
+  paste it into the same dialog of your project, and translate it's text.
+
+- From the "View" menu of IDR_MAINFRAME copy the "Pane coordinates" entry to your project and
+  translate the text of it.
+
+- Change the resource string IDS_LANGUAGEVERSION in your project to V1.3 - this is importand
+  otherwice MLCad will refuse to load this dll!
+
+
+
+Upgrade vom MLCad V3.20 to V3.30
+======================================
+- Copy the string resources IDS_LOAD_STD_COLOR, IDS_INVALID_LANGUAGE, 
+  IDS_COLORSORT_HEADER, IDS_RECURSION_ERROR and IDS_USE_STD_AS_DFLT to your 
+  resource file and translate them.
+- Copy the Tab-Control from IDD_DIALOG_COLOR to your resource
+- Copy the two new buttons "Standard as default" and "Load standard colors" 
+  from the dialog IDD_DIALOG_COLOR to your resource and translate the texts. 
+  Make the checkbox "Dithered" invisible.
+  Also you should reassign the tab order within the dialog.
+- In your IDD_CUSTCOLOR dialog change the text of the group boxes from 
+  "Primary channel" to "Main Color" and from "Secundary Channel"
+  to "Edge color".
+- Change the version number in the string resource IDS_LANGUAGEVERSION to V1.4, 
+  otherwise MLCad will not load it.
