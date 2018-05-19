@@ -13,13 +13,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Englisch (USA) resources
+// Español resources
 
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
-LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
 #pragma code_page(1252)
-#endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -27,28 +25,44 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 //
 
 IDB_ARROW_ICON          BITMAP                  "Arrow.bmp"
+
 IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
 IDB_SPLASH              BITMAP                  "res\\Splsh16.bmp"
+
 IDR_TOOLBAR_ELEMENT     BITMAP                  "res\\toolbar_.bmp"
+
 IDB_BITMAP_STATES       BITMAP                  "res\\bitmap_s.bmp"
+
 IDR_TOOLBAR_ADDREM      BITMAP                  "res\\toolbar1.bmp"
+
 IDR_TOOLBAR_SELECT      BITMAP                  "res\\bmp00001.bmp"
+
 IDR_TOOLBAR_VIEW        BITMAP                  "res\\bmp00002.bmp"
+
 IDB_BITMAP_LOGO         BITMAP                  "res\\MLCAD MS Tiny.bmp"
+
 IDR_TOOLBAR_EXPERT      BITMAP                  "res\\bmp00003.bmp"
+
 IDR_TOOLBAR_ZOOM        BITMAP                  "res\\bmp00004.bmp"
+
 IDR_TOOLBAR_EDIT        BITMAP                  "res\\bmp00005.bmp"
+
 IDR_TOOLBAR_EXTRAS      BITMAP                  "res\\bmp00006.bmp"
+
 IDB_SPRING              BITMAP                  "res\\bitmap1.bmp"
+
 IDB_RUBBERBELT          BITMAP                  "res\\rubberbelt.bmp"
+
 IDB_BITMAP_PLATE        BITMAP                  "res\\bitmap_p.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Dialog
 //
 
-CG_IDD_COLORBAR DIALOG  0, 0, 21, 261
+CG_IDD_COLORBAR DIALOG 0, 0, 21, 261
 STYLE DS_SETFONT | WS_CHILD
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -71,7 +85,7 @@ BEGIN
     PUSHBUTTON      "M",ID_EDIT_PARTCOLOR,5,245,10,10
 END
 
-IDD_ABOUTBOX DIALOG  0, 0, 235, 141
+IDD_ABOUTBOX DIALOG 0, 0, 235, 141
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About MLCad"
 FONT 8, "MS Sans Serif"
@@ -79,7 +93,7 @@ BEGIN
     LTEXT           "MLCad Version",IDC_VERSIONSTRING,9,10,136,8,SS_NOPREFIX
     LTEXT           "Copyright © 1999-2004  by Michael Lachmann",IDC_STATIC,10,30,215,8
     DEFPUSHBUTTON   "OK",IDOK,90,120,50,14,WS_GROUP
-    CONTROL         179,IDC_STATIC,"Static",SS_BITMAP,164,7,64,18
+    CONTROL         IDB_BITMAP_LOGO,IDC_STATIC,"Static",SS_BITMAP,164,7,64,18
     LTEXT           "mailto:support@lm-software.com",IDC_MAILTO,55,65,102,8
     LTEXT           "http://www.lm-software.com/mlcad/",IDC_URL,55,90,116,8
     ICON            IDI_MAILTO,IDC_MAIL1,25,60,20,20
@@ -87,7 +101,7 @@ BEGIN
     GROUPBOX        "Contact",IDC_STATIC,10,45,205,70
 END
 
-CG_IDD_PROGRESS DIALOG  0, 0, 186, 79
+CG_IDD_PROGRESS DIALOG 0, 0, 186, 79
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -153,7 +167,7 @@ BEGIN
     CONTROL         "",IDC_SORT_TAB,"SysTabControl32",0x0,7,7,203,13
 END
 
-IDD_PROPPAGE1 DIALOG  0, 0, 272, 141
+IDD_PROPPAGE1 DIALOG 0, 0, 272, 141
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "General"
 FONT 8, "MS Sans Serif"
@@ -200,7 +214,7 @@ BEGIN
     CONTROL         "Perspective",IDC_PERSPECTIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,68,16,53,10
 END
 
-IDD_PROPPAGE3 DIALOG  0, 0, 272, 141
+IDD_PROPPAGE3 DIALOG 0, 0, 272, 141
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Printing"
 FONT 8, "MS Sans Serif"
@@ -267,7 +281,7 @@ BEGIN
     GROUPBOX        "Position of new object",IDC_STATIC,5,40,260,25
 END
 
-IDD_DIALOG_ZOOM DIALOG  0, 0, 151, 61
+IDD_DIALOG_ZOOM DIALOG 0, 0, 151, 61
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Zom Factor"
 FONT 8, "MS Sans Serif"
@@ -279,7 +293,7 @@ BEGIN
     PUSHBUTTON      "Default",IDC_DEFAULT,94,15,50,14
 END
 
-IDD_DIALOG_FORM DIALOG  0, 0, 31, 46
+IDD_DIALOG_FORM DIALOG 0, 0, 31, 46
 STYLE DS_SETFONT | WS_CHILD
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -289,7 +303,7 @@ BEGIN
     SCROLLBAR       IDC_SCROLL_GROUP,0,35,18,11
 END
 
-IDD_DIALOG_COMMENTS DIALOG  0, 0, 249, 146
+IDD_DIALOG_COMMENTS DIALOG 0, 0, 249, 146
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Comments"
 FONT 8, "MS Sans Serif"
@@ -300,7 +314,7 @@ BEGIN
     CONTROL         "Show old style comments",IDC_SHOW_OLD_COMMENTS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,151,110,95,10
 END
 
-IDD_DIALOG_DIMENSIONS DIALOG  0, 0, 224, 82
+IDD_DIALOG_DIMENSIONS DIALOG 0, 0, 224, 82
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Dimensions"
 FONT 8, "MS Sans Serif"
@@ -309,7 +323,7 @@ BEGIN
     CONTROL         "List1",IDC_REPDIM_LIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,7,7,212,46
 END
 
-IDD_DIALOG_NEW_COMMENT DIALOG  0, 0, 186, 71
+IDD_DIALOG_NEW_COMMENT DIALOG 0, 0, 186, 71
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Comment"
 FONT 8, "MS Sans Serif"
@@ -322,7 +336,7 @@ BEGIN
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,35,131,10
 END
 
-IDD_DIALOG_NEWSUBPART DIALOG  0, 0, 186, 95
+IDD_DIALOG_NEWSUBPART DIALOG 0, 0, 186, 95
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Model Information"
 FONT 8, "MS Sans Serif"
@@ -335,7 +349,7 @@ BEGIN
     LTEXT           "Submodel description:",IDC_STATIC,5,35,70,8
 END
 
-IDD_DIALOG_ROTSTEP DIALOG  0, 0, 182, 196
+IDD_DIALOG_ROTSTEP DIALOG 0, 0, 182, 196
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Rotation Step Angle"
 FONT 8, "MS Sans Serif"
@@ -357,7 +371,7 @@ BEGIN
     CTEXT           "Drag mouse and optionally use the SHIFT key to set angle in preview",IDC_STATIC,7,156,162,16
 END
 
-IDD_DIALOG_LISTFORM DIALOG  0, 0, 211, 26
+IDD_DIALOG_LISTFORM DIALOG 0, 0, 211, 26
 STYLE DS_SETFONT | WS_CHILD
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -366,7 +380,7 @@ BEGIN
     LTEXT           "Active Model:",IDC_STATIC_INFOTEXT,5,2,44,8
 END
 
-IDD_PROPPAGE5 DIALOG  0, 0, 272, 141
+IDD_PROPPAGE5 DIALOG 0, 0, 272, 141
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Step, Grid, Snap"
 FONT 8, "MS Sans Serif"
@@ -400,7 +414,7 @@ BEGIN
     LTEXT           "Rotation angle:",IDC_STATIC,205,106,49,8
 END
 
-IDD_DIALOG_FRACT DIALOG  0, 0, 312, 250
+IDD_DIALOG_FRACT DIALOG 0, 0, 312, 250
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Fractal Landscape Generator"
 FONT 8, "MS Sans Serif"
@@ -426,7 +440,7 @@ BEGIN
     PUSHBUTTON      "Preview",IDC_SHOW_MODEL,5,200,110,14
 END
 
-IDD_DIALOG_PICMOD DIALOG  0, 0, 192, 193
+IDD_DIALOG_PICMOD DIALOG 0, 0, 192, 193
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Mosaic Generator"
 FONT 8, "MS Sans Serif"
@@ -450,7 +464,7 @@ BEGIN
     LTEXT           "Color",IDC_STATIC,60,75,17,8
 END
 
-IDD_DIALOG_PIECES DIALOG  0, 0, 262, 174
+IDD_DIALOG_PIECES DIALOG 0, 0, 262, 174
 STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
 CAPTION "Save Parts List Options"
 FONT 8, "MS Sans Serif"
@@ -465,7 +479,7 @@ BEGIN
     CONTROL         "Submodels",IDC_SUBMODELS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,195,160,51,10
 END
 
-IDD_DIALOG_SELPART DIALOG  0, 0, 297, 175
+IDD_DIALOG_SELPART DIALOG 0, 0, 297, 175
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Select Part"
 FONT 8, "MS Sans Serif"
@@ -478,7 +492,7 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,240,155,50,14
 END
 
-IDD_DIALOG_SEARCHPART DIALOG  0, 0, 186, 86
+IDD_DIALOG_SEARCHPART DIALOG 0, 0, 186, 86
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Search Part"
 FONT 8, "MS Sans Serif"
@@ -492,7 +506,7 @@ BEGIN
     LTEXT           "Search for:",IDC_STATIC,5,10,36,8
 END
 
-IDD_DIALOG_SELMODEL DIALOG  0, 0, 186, 94
+IDD_DIALOG_SELMODEL DIALOG 0, 0, 186, 94
 STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
 CAPTION "Select Model"
 FONT 8, "MS Sans Serif"
@@ -502,7 +516,7 @@ BEGIN
     CONTROL         "List2",IDC_MODELLIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,5,5,175,65
 END
 
-IDD_DIALOG_HELP DIALOG  0, 0, 406, 279
+IDD_DIALOG_HELP DIALOG 0, 0, 406, 279
 STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
 CAPTION "MLCad Help"
 FONT 8, "MS Sans Serif"
@@ -558,7 +572,7 @@ BEGIN
     LTEXT           "Name:",IDC_STATIC,5,178,22,8
 END
 
-IDD_DIALOG_BGND DIALOG  0, 0, 232, 135
+IDD_DIALOG_BGND DIALOG 0, 0, 232, 135
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Background Image"
 FONT 8, "MS Sans Serif"
@@ -572,7 +586,7 @@ BEGIN
     CONTROL         "",IDC_PREVIEW,"Static",SS_WHITERECT | SS_SUNKEN,5,45,220,60
 END
 
-IDD_BASEPATH DIALOG  0, 0, 222, 86
+IDD_BASEPATH DIALOG 0, 0, 222, 86
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "LDraw Base Path"
 FONT 8, "MS Sans Serif"
@@ -586,7 +600,7 @@ BEGIN
     EDITTEXT        IDC_STATUS,5,45,210,14,ES_AUTOHSCROLL | ES_READONLY
 END
 
-IDD_DIALOG_PRIMITIVE DIALOG  0, 0, 212, 121
+IDD_DIALOG_PRIMITIVE DIALOG 0, 0, 212, 121
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Primitive"
 FONT 8, "MS Sans Serif"
@@ -615,7 +629,7 @@ BEGIN
     PUSHBUTTON      "Swap",IDC_SWAP,80,100,50,14
 END
 
-IDD_DIALOG_BFC DIALOG  0, 0, 172, 95
+IDD_DIALOG_BFC DIALOG 0, 0, 172, 95
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "BFC Statement Data"
 FONT 8, "MS Sans Serif"
@@ -631,7 +645,7 @@ BEGIN
     CONTROL         "INVERTNEXT",IDC_INVERT_NEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,52,62,10
 END
 
-IDD_DIALOG_BUFEXCHG DIALOG  0, 0, 157, 46
+IDD_DIALOG_BUFEXCHG DIALOG 0, 0, 157, 46
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Buffer Exchange"
 FONT 8, "MS Sans Serif"
@@ -643,7 +657,7 @@ BEGIN
     CONTROL         "Retrieve",IDC_RETRIEVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,6,43,10
 END
 
-IDD_DIALOG_GRPNAME DIALOG  0, 0, 186, 55
+IDD_DIALOG_GRPNAME DIALOG 0, 0, 186, 55
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Group"
 FONT 8, "MS Sans Serif"
@@ -654,7 +668,7 @@ BEGIN
     EDITTEXT        IDC_GROUPNAME,5,15,175,14,ES_AUTOHSCROLL
 END
 
-IDD_PROPPAGEEXP1 DIALOG  0, 0, 317, 170
+IDD_PROPPAGEEXP1 DIALOG 0, 0, 317, 170
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Export Configuration"
 FONT 8, "MS Sans Serif"
@@ -678,7 +692,7 @@ BEGIN
     CONTROL         "Create log file:",IDC_ENABLEPOSTLOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,130,61,10
 END
 
-IDD_PROPPAGEEXP2 DIALOG  0, 0, 317, 215
+IDD_PROPPAGEEXP2 DIALOG 0, 0, 317, 215
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Post Processor Configurations"
 FONT 8, "MS Sans Serif"
@@ -709,7 +723,7 @@ BEGIN
     CONTROL         "Command Line",IDC_PPISCOMMAND3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,155,63,10
 END
 
-IDD_DIALOG_ENTERPOSMAT DIALOG  0, 0, 247, 178
+IDD_DIALOG_ENTERPOSMAT DIALOG 0, 0, 247, 178
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Position & Orientation"
 FONT 8, "MS Sans Serif"
@@ -744,7 +758,7 @@ BEGIN
     PUSHBUTTON      "Mat.->Vec.",IDC_CVTMATVEC,190,103,50,14
 END
 
-IDD_PROPPAGE6 DIALOG  0, 0, 272, 141
+IDD_PROPPAGE6 DIALOG 0, 0, 272, 141
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "View Mode"
 FONT 8, "MS Sans Serif"
@@ -758,7 +772,7 @@ BEGIN
     GROUPBOX        "Left mouse button in 3D view",IDC_STATIC,5,35,170,50
 END
 
-IDD_DIALOG_MODSEQ DIALOG  0, 0, 228, 121
+IDD_DIALOG_MODSEQ DIALOG 0, 0, 228, 121
 STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
 CAPTION "Model Sequence"
 FONT 8, "MS Sans Serif"
@@ -770,7 +784,7 @@ BEGIN
     PUSHBUTTON      "Move down",IDC_DOWN,171,79,50,15
 END
 
-IDD_DIALOG_ROTPT DIALOG  0, 0, 299, 158
+IDD_DIALOG_ROTPT DIALOG 0, 0, 299, 158
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Define Rotation Point"
 FONT 8, "MS Sans Serif"
@@ -820,7 +834,7 @@ BEGIN
     PUSHBUTTON      "Size...",IDC_MYSIZE,5,69,40,14
 END
 
-IDD_DIALOG_EDITROT DIALOG  0, 0, 177, 50
+IDD_DIALOG_EDITROT DIALOG 0, 0, 177, 50
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
 CAPTION "Size Rotation Model"
 FONT 8, "MS Sans Serif"
@@ -833,7 +847,7 @@ BEGIN
     LTEXT           "Height:",IDC_STATIC,101,8,24,8
 END
 
-IDD_DIALOG_SORTPARMS DIALOG  0, 0, 186, 95
+IDD_DIALOG_SORTPARMS DIALOG 0, 0, 186, 95
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Sorting Parameters"
 FONT 8, "MS Sans Serif"
@@ -954,13 +968,13 @@ BEGIN
     LTEXT           "Radius 1 (R1):",IDC_STATIC,7,40,46,8
     LTEXT           "Radius 2 (R2):",IDC_STATIC,7,56,46,8
     LTEXT           "Precision:",IDC_STATIC,7,97,32,8
-    CONTROL         135,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,129,6,125,82
+    CONTROL         IDB_RUBBERBELT,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,129,6,125,82
     LTEXT           "Thickness (E):",IDC_STATIC,7,72,46,8
     CONTROL         "",IDC_PREVIEW,"Static",SS_BLACKRECT | SS_NOTIFY | SS_SUNKEN,265,5,124,85
     LTEXT           "Copyright © by Marc Klein && Philo, modified for MLCad by Ing. Michael Lachmann",IDC_STATIC,70,140,256,8
 END
 
-IDD_AUTOSTEPS DIALOG  0, 0, 186, 86
+IDD_AUTOSTEPS DIALOG 0, 0, 186, 86
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Autosteps"
 FONT 8, "MS Sans Serif"
@@ -975,7 +989,7 @@ BEGIN
     LTEXT           "Number of parts",IDC_STATIC,60,45,51,8
 END
 
-IDD_SPRING_GENERATOR DIALOG  0, 0, 397, 162
+IDD_SPRING_GENERATOR DIALOG 0, 0, 397, 162
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Spring Generator"
 FONT 8, "MS Sans Serif"
@@ -1006,11 +1020,11 @@ BEGIN
     LTEXT           "Bottom (B):",IDC_STATIC,13,100,36,8
     GROUPBOX        "Start revolutions",IDC_STATIC,7,71,120,45
     CONTROL         "",IDC_PREVIEW,"Static",SS_BLACKRECT | SS_NOTIFY | SS_SUNKEN,265,5,124,110
-    CONTROL         209,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,135,5,124,110
+    CONTROL         IDB_BITMAP1,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,135,5,124,110
     LTEXT           "Copyright © by Marc Klein, modified for MLCad by Ing. Michael Lachmann",IDC_STATIC,82,145,233,8
 END
 
-IDD_HOSE_GENERATOR DIALOG  0, 0, 424, 194
+IDD_HOSE_GENERATOR DIALOG 0, 0, 424, 194
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Flexible Hose Generator"
 FONT 8, "MS Sans Serif"
@@ -1081,7 +1095,7 @@ BEGIN
     DEFPUSHBUTTON   "Ok",IDOK,5,200,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,345,200,50,14
     CONTROL         "",IDC_PREVIEW,"Static",SS_BLACKRECT | SS_NOTIFY | SS_SUNKEN,270,10,124,82
-    CONTROL         104,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,135,10,125,82
+    CONTROL         CG_IDS_PROGRESS_CAPTION,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,135,10,125,82
     LTEXT           "Copyright © by Willy Tschager, modified for MLCad by Ing. Michael Lachmann",IDC_STATIC,82,205,246,8
     GROUPBOX        "Pointer",IDC_STATIC,5,5,122,87
     LTEXT           "Length (L1):",IDC_STATIC,13,38,39,8
@@ -1097,7 +1111,7 @@ BEGIN
     LTEXT           "Color:",IDC_STATIC,16,152,19,8
 END
 
-IDD_DIALOG_ADDLSYNTH DIALOG  0, 0, 262, 46
+IDD_DIALOG_ADDLSYNTH DIALOG 0, 0, 262, 46
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Add LSynth Command"
 FONT 8, "MS Sans Serif"
@@ -1107,7 +1121,7 @@ BEGIN
     COMBOBOX        IDC_LSYNTH_COMBO,5,5,250,160,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
 END
 
-IDD_PLATE_GENERATOR DIALOG  0, 0, 402, 146
+IDD_PLATE_GENERATOR DIALOG 0, 0, 402, 146
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Baseplate Generator"
 FONT 8, "MS Sans Serif"
@@ -1125,13 +1139,31 @@ BEGIN
     DEFPUSHBUTTON   "Ok",IDOK,5,125,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,345,125,50,14
     CONTROL         "",IDC_PREVIEW,"Static",SS_BLACKRECT | SS_NOTIFY | SS_SUNKEN,270,10,124,82
-    CONTROL         236,-1,"Static",SS_BITMAP | SS_SUNKEN,135,10,125,82
+    CONTROL         IDD_PLATE_GENERATOR,-1,"Static",SS_BITMAP | SS_SUNKEN,135,10,125,82
     LTEXT           "Copyright © by Tore Eriksson, modified for MLCad by Ing. Michael Lachmann",-1,82,130,243,8
     GROUPBOX        "Measures",-1,5,5,122,85
     LTEXT           "Length (L):",-1,13,38,35,8
     LTEXT           "Width (W):",-1,13,20,35,8
     LTEXT           "Height (H):",-1,13,58,35,8
     CONTROL         "Studs",IDC_STUDS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,75,34,10
+END
+
+IDD_DIALOG_CONFIG_TREE DIALOG 0, 0, 297, 175
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Parts Tree Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,5,155,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,240,155,50,14
+    CONTROL         "List1",IDC_GROUPS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,5,20,227,107
+    LTEXT           "Tree and search strings (Display order)",IDC_STATIC,5,10,122,8
+    EDITTEXT        IDC_NAME,30,134,95,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RULE,195,134,95,14,ES_AUTOHSCROLL
+    LTEXT           "Name:",IDC_STATIC,5,137,22,8
+    LTEXT           "Search string:",IDC_STATIC,148,137,44,8
+    PUSHBUTTON      "Move up",IDC_VIEW_UP,240,20,50,14
+    PUSHBUTTON      "Move down",IDC_VIEW_DOWN,240,40,50,14
+    PUSHBUTTON      "Delete",IDC_DELETE,240,79,50,14
 END
 
 
@@ -1141,7 +1173,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     CG_IDD_COLORBAR, DIALOG
     BEGIN
@@ -1534,45 +1566,15 @@ BEGIN
         TOPMARGIN, 7
         BOTTOMMARGIN, 139
     END
+
+    IDD_DIALOG_CONFIG_TREE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+    END
 END
-#endif    // APSTUDIO_INVOKED
-
-
-#ifdef APSTUDIO_INVOKED
-/////////////////////////////////////////////////////////////////////////////
-//
-// TEXTINCLUDE
-//
-
-1 TEXTINCLUDE 
-BEGIN
-    "resource.h\0"
-END
-
-2 TEXTINCLUDE 
-BEGIN
-    "#include ""afxres.h""\r\n"
-    "\0"
-END
-
-3 TEXTINCLUDE 
-BEGIN
-    "#define _AFX_NO_OLE_RESOURCES\r\n"
-    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
-    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
-    "\r\n"
-    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
-    "#ifdef _WIN32\r\n"
-    "LANGUAGE 9, 1\r\n"
-    "#pragma code_page(1252)\r\n"
-    "#endif //_WIN32\r\n"
-    "#include ""res\\LegoCAD.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
-    "#include ""afxres.rc""         // Standard components\r\n"
-    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
-    "#endif\r\n"
-    "\0"
-END
-
 #endif    // APSTUDIO_INVOKED
 
 
@@ -1584,19 +1586,30 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\lego3.ico"
+
 IDI_ICON4               ICON                    "res\\LegoCAD.ico"
+
 IDI_ICON1               ICON                    "res\\LegoCADDoc.ico"
+
 IDR_LEGOCATYPE          ICON                    "res\\lego.ico"
+
 IDI_ICON2               ICON                    "res\\lego1.ico"
+
 IDI_ICON3               ICON                    "res\\lego2.ico"
+
 IDI_ICON_MORE_COLORS    ICON                    "res\\icon_mor.ico"
+
+IDI_MAILTO              ICON                    "res\\icon1.ico"
+
+IDI_HTTP                ICON                    "res\\ico00001.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Toolbar
 //
 
-IDR_MAINFRAME TOOLBAR  16, 15
+IDR_MAINFRAME TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_FILE_NEW
     BUTTON      ID_FILE_OPEN
@@ -1614,7 +1627,7 @@ BEGIN
     BUTTON      ID_CONTEXT_HELP
 END
 
-IDR_TOOLBAR_ELEMENT TOOLBAR  16, 15
+IDR_TOOLBAR_ELEMENT TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_EDIT_MOVE_DX
     BUTTON      ID_EDIT_MOVE_UX
@@ -1633,7 +1646,7 @@ BEGIN
     BUTTON      ID_EDIT_MOVEROT_ENTER
 END
 
-IDR_TOOLBAR_ADDREM TOOLBAR  16, 15
+IDR_TOOLBAR_ADDREM TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_EDIT_INSERT_PART
     BUTTON      ID_EDIT_INSERT_COMMENT
@@ -1645,7 +1658,7 @@ BEGIN
     BUTTON      ID_EDIT_ADD_BUFFEREXCHANGE
 END
 
-IDR_TOOLBAR_SELECT TOOLBAR  16, 15
+IDR_TOOLBAR_SELECT TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_NAVIGATE_SELTOP
     BUTTON      ID_NAVIGATE_SELPREV
@@ -1659,7 +1672,7 @@ BEGIN
     BUTTON      ID_EDIT_SELECT_SAMECOLOR
 END
 
-IDR_TOOLBAR_VIEW TOOLBAR  16, 15
+IDR_TOOLBAR_VIEW TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_SETTINGS_EDITMODE
     BUTTON      ID_SETTINGS_PLACEMODE
@@ -1673,7 +1686,7 @@ BEGIN
     BUTTON      ID_SETTINGS_DRAWTOSEL
 END
 
-IDR_TOOLBAR_EXPERT TOOLBAR  16, 15
+IDR_TOOLBAR_EXPERT TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_EDIT_ADD_LINE
     BUTTON      ID_EDIT_ADD_TRIANGLE
@@ -1689,7 +1702,7 @@ BEGIN
     BUTTON      ID_EXTRAS_LSYNTH_UNGROUP
 END
 
-IDR_TOOLBAR_ZOOM TOOLBAR  16, 15
+IDR_TOOLBAR_ZOOM TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_SETTINGS_ZOOM_300
     BUTTON      ID_SETTINGS_ZOOM_200
@@ -1703,7 +1716,7 @@ BEGIN
     BUTTON      ID_SETTINGS_ZOOM_FIT
 END
 
-IDR_TOOLBAR_EDIT TOOLBAR  16, 15
+IDR_TOOLBAR_EDIT TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_EDIT_VISIBILITY_GHOST
     BUTTON      ID_EDIT_VISIBILITY_GHOSTOFF
@@ -1719,7 +1732,7 @@ BEGIN
     BUTTON      ID_SETTINGS_CENTEREDROTATE
 END
 
-IDR_TOOLBAR_EXTRAS TOOLBAR  16, 15
+IDR_TOOLBAR_EXTRAS TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_REPORT_DIMENSIONS
     SEPARATOR
@@ -1740,15 +1753,15 @@ END
 // Menu
 //
 
-IDR_MAINFRAME MENU 
+IDR_MAINFRAME MENU
 BEGIN
     POPUP "&File"
     BEGIN
-        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
-        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
-        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
-        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
-        MENUITEM "&Export...",                  ID_FILE_EXPORT
+        MENUITEM "&New\tCtrl+N",              ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",            ID_FILE_SAVE
+        MENUITEM "Save &As...",            ID_FILE_SAVE_AS
+        MENUITEM "&Export...",                ID_FILE_EXPORT
         MENUITEM "Save &Image(s)...",           ID_FILE_SAVEPICTURES
         MENUITEM "Save Parts &List...",         ID_FILE_SAVEPARTLIST
         MENUITEM "Re&vert",                     ID_FILE_REVERT
@@ -1761,7 +1774,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
         MENUITEM SEPARATOR
-        MENUITEM "E&xit",                       ID_APP_EXIT
+        MENUITEM "E&xit",                      ID_APP_EXIT
     END
     POPUP "&Edit"
     BEGIN
@@ -1960,7 +1973,7 @@ BEGIN
     END
 END
 
-IDR_POPUP_LEGO_CADVIEW MENU 
+IDR_POPUP_LEGO_CADVIEW MENU
 BEGIN
     POPUP "_POPUP_"
     BEGIN
@@ -2011,7 +2024,7 @@ BEGIN
     END
 END
 
-CG_IDR_POPUP_LCLIST_VIEW MENU 
+CG_IDR_POPUP_LCLIST_VIEW MENU
 BEGIN
     POPUP "_POPUP_"
     BEGIN
@@ -2046,7 +2059,7 @@ BEGIN
     END
 END
 
-CG_IDR_POPUP_LCTREE_VIEW MENU 
+CG_IDR_POPUP_LCTREE_VIEW MENU
 BEGIN
     POPUP "_POPUP_"
     BEGIN
@@ -2063,7 +2076,7 @@ BEGIN
     END
 END
 
-CG_IDR_POPUP_MAIN_FRAME MENU 
+CG_IDR_POPUP_MAIN_FRAME MENU
 BEGIN
     POPUP "_POPUP_"
     BEGIN
@@ -2087,7 +2100,7 @@ END
 // Accelerator
 //
 
-IDR_MAINFRAME ACCELERATORS 
+IDR_MAINFRAME ACCELERATORS
 BEGIN
     "A",            ID_EDIT_ROTATE_UY,      VIRTKEY, NOINVERT
     "C",            ID_EDIT_PARTCOLOR,      VIRTKEY, NOINVERT
@@ -2170,7 +2183,7 @@ VS_VERSION_INFO VERSIONINFO
 BEGIN
     BLOCK "StringFileInfo"
     BEGIN
-        BLOCK "040904b0"
+        BLOCK "000a04b0"
         BEGIN
             VALUE "CompanyName", "Ing. Michael Lachmann"
             VALUE "FileDescription", "Mikes Lego CAD"
@@ -2184,7 +2197,7 @@ BEGIN
     END
     BLOCK "VarFileInfo"
     BEGIN
-        VALUE "Translation", 0x409, 1200
+        VALUE "Translation", 0xa, 1200
     END
 END
 
@@ -2409,19 +2422,19 @@ END
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDR_MAINFRAME           "MLCad\n\nMLCad\nMLCad Files (*.ldr)\n.ldr\nMLCad.Document\nMLCad Document"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_APP_TITLE       "MLCad"
     AFX_IDS_IDLEMESSAGE     "Press F1 for help."
     AFX_IDS_HELPMODEMESSAGE "Select an object on which to get help."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_INDICATOR_EXT        "EXT"
     ID_INDICATOR_CAPS       "CAP"
@@ -2431,7 +2444,7 @@ BEGIN
     ID_INDICATOR_REC        "REC"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_NEW             "Create a new part or model.\nNew"
     ID_FILE_OPEN            "Open an existing file.\nOpen..."
@@ -2444,7 +2457,7 @@ BEGIN
     ID_FILE_PRINT_PREVIEW   "Display full pages.\nPrint Preview"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_APP_ABOUT            "Display program information, version number and copyright.\nAbout MLCad..."
     ID_APP_EXIT             "Quit MLCad; prompts to save the current file.\nExit"
@@ -2455,7 +2468,7 @@ BEGIN
     ID_HELP                 "Display help for current task or command.\nHelp"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_MRU_FILE1       "Open this file."
     ID_FILE_MRU_FILE2       "Open this file."
@@ -2475,18 +2488,18 @@ BEGIN
     ID_FILE_MRU_FILE16      "Open this file."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_NEXT_PANE            "Switch to the next window pane.\nNext Pane"
     ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_WINDOW_SPLIT         "Split the active window into panes.\nSplit"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_CLEAR           "Erase the selection.\nErase"
     ID_EDIT_CLEAR_ALL       "Erase everything.\nErase All"
@@ -2501,13 +2514,13 @@ BEGIN
     ID_EDIT_REDO            "Redo the previously undone action.\nRedo"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_VIEW_TOOLBAR         "Show or hide the mainbar.\nToggle Mainbar"
     ID_VIEW_STATUS_BAR      "Show or hide the status bar.\nToggle Status Bar"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_SCSIZE          "Change the window size."
     AFX_IDS_SCMOVE          "Change the window position."
@@ -2518,13 +2531,13 @@ BEGIN
     AFX_IDS_SCCLOSE         "Close the active window and prompts to save the file."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_SCRESTORE       "Restore the window to normal size."
     AFX_IDS_SCTASKLIST      "Activate task list."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_PREVIEW_CLOSE   "Close print preview mode.\nCancel Preview"
     IDS_STRING_NOHELP       "Sorry windows help is not available.\nPlease open the HTML pages for help!"
@@ -2537,14 +2550,14 @@ BEGIN
     IDS_STRING_MPDRECURSION "This file contains recursively included submodels.\nThey will be disabled now and will not be displayed.\nPlease correct the problem, save the file and reload it again."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     CG_IDS_PROGRESS_CAPTION "Progress"
     CG_ID_VIEW_LEGOPARTS    "Show or hide LDraw parts.\nToggle LDraw parts"
     IDS_PROPSHT_CAPTION     "MLCad Settings"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_VIEW_MODEL_TOP       "View part/model from above.\nTop"
     ID_VIEW_MODEL_BOTTOM    "View part/model from below.\nBelow"
@@ -2559,7 +2572,7 @@ BEGIN
     ID_EDIT_INSERT_PART     "Add new part at the insertion point.\nAdd Part..."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_INSERT_STEP     "Add step at the insertion point.\nAdd Step"
     ID_EDIT_INSERT_COMMENT  "Add comment at the insertion point.\nAdd Comment..."
@@ -2575,7 +2588,7 @@ BEGIN
     ID_EDIT_MOVE_DZ         "Move selected object(s) along the X axis (negative).\nMove along Z axis (negative)"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_POPUP_REMOVE         "Remove this part from the library favorites.\nRemove from favorites"
     ID_POPUP_FINDAGAIN      "Find next matching part.\nFind again"
@@ -2587,13 +2600,13 @@ BEGIN
     ID_NAVIGATE_SELLAST     "Jump to last step or select last object.\nLast"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_POPUP_FIND           "Find a part in the parts library.\nFind..."
     ID_POPUP_ADDTOFAVORITES "Add this part to the library favorites.\nAdd to favorites"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDC_COLORBUT_1          "Black"
     IDC_COLORBUT_2          "Blue"
@@ -2605,7 +2618,7 @@ BEGIN
     IDC_COLORBUT_8          "Light-Gray"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDC_COLORBUT_9          "Dark-Gray"
     IDC_COLORBUT_10         "Light-Blue"
@@ -2625,7 +2638,7 @@ BEGIN
     IDC_COLORBUT_24         "Purple-Blue"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDC_COLORBUT_25         "Edge-Color"
     IDC_COLORBUT_26         "Orange-Solid"
@@ -2644,7 +2657,7 @@ BEGIN
     IDS_STRING_IGNORECH     "Discard changes?"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_VIEW_EDITBAR         "Show or hide the objectbar.\nToggle Objectbar"
     ID_VIEW_ELEMENTBAR      "Show or hide the transformationbar.\nToggle Transformationbar"
@@ -2653,7 +2666,7 @@ BEGIN
     ID_SETTINGS_EDITMODE    "Activate view mode.\nView Mode"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_ROTATE_DX       "Rotate selected object(s) along the X axis (counterclockwise).\nRotate along X axis (counterclockwise)"
     ID_EDIT_ROTATE_UX       "Rotate selected object(s) along the X axis (clockwise).\nRotate along X axis (clockwise)"
@@ -2667,7 +2680,7 @@ BEGIN
     ID_REPORT_COMMENTS      "Show all comments of the file.\nComments..."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_SAVEPICTURES    "Generate image(s) of the complete assembly or building instructions.\nSave Image(s)..."
     ID_FILE_SCANPARTS       "Search for new parts, which are not part of the library.\nScan Parts"
@@ -2691,14 +2704,14 @@ BEGIN
     ID_EDIT_PARTCOLOR       "Change color of selected object(s).\nPart Color..."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     CG_ID_VIEW_COLORBAR     "Show or hide Colorbar\nToggle Colorbar"
     IDS_PROPSHTEXP_CAPTION  "Export Files(s)"
     CG_ID_VIEW_NAVIGATEBAR  "Show or hide Navigatebar.\nToggle Navigatebar"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_STRING_ADDRECURSION "You cannot include this submodel\nas it would cause a recursion!"
     IDS_STRING_PASTERECURSION 
@@ -2718,7 +2731,7 @@ BEGIN
     IDS_NOTASSOC            "MLCad is not (properly) registered for it's file types. Register it now?"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_DUPLICATE       "Duplicate selected object(s).\nDuplicate"
     ID_SETTINGS_GRID_COARSE "Coarse steps and grid.\nGrid Coarse"
@@ -2737,7 +2750,7 @@ BEGIN
     ID_SETTINGS_ZOOM_FIT    "Zoom the part/model to fit into the window.\nZoom To Fit"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_POPUP_ZOOM_IN        "View the part/model bigger.\nZoom In"
     ID_POPUP_ZOOM_OUT       "View the part/model smaller.\nZoom Out"
@@ -2748,7 +2761,7 @@ BEGIN
                             "Generate a fractal mountain model.\nFractal Generator..."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EXTRAS_PICTUREMODEL  "Create a flat colored model from an image.\nImage Model..."
     ID_EXTRAS_HEIGHTMODEL   "Generate a mosaic from an image file.\nMosaic Generator..."
@@ -2764,7 +2777,7 @@ BEGIN
     ID_EDIT_ADD_BACKGROUND  "Add step background at the insertion point.\nAdd Step Background..."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_ADD_LINE        "Add a line at the insertion point.\nAdd Line..."
     ID_EDIT_ADD_TRIANGLE    "Add a triangle at the insertion point.\nAdd Triangle..."
@@ -2781,7 +2794,7 @@ BEGIN
                             "Store or retrieve states.\nAdd Buffer Exchange..."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_GROUP_CREATE    "Group selected objects together.\nGroup..."
     ID_EDIT_GROUP_UNGROUP   "Ungroup grouped objects.\nUngroup"
@@ -2791,7 +2804,7 @@ BEGIN
     ID_EDIT_VISIBILITY_GHOSTOFF "Unghost selected object(s).\nUnghost"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_SNAPTOGRID      "Snap selected object(s) to grid.\nSnap To Grid"
     ID_SETTINGS_CENTEREDROTATE 
@@ -2809,7 +2822,7 @@ BEGIN
     ID_SETTINGS_GROUPS_RESET "Restore default parts library tree.\nDefault"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EXTRAS_FILECASH_FLUSH "Remove unused files from cache.\nFlush"
     ID_EXTRAS_FILECASH_RESET "Reset cache completely.\nReset"
@@ -2830,7 +2843,7 @@ BEGIN
     ID_EXTRAS_GENERATORS_SPRING "Generate a spring.\nSpring Generator..."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_ERROR_NAMEUSED      "Name has already been used for another group!\nPlease insert a new name."
     IDS_COLORMORE           "More"
@@ -2850,7 +2863,7 @@ BEGIN
     IDS_SHORTPNTHDLINE      "No.\tColor\tPart no.\tPart name"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_SELPARTHEADER       "Part no.|Part name"
     IDS_PLISTHEADER         "Model|Step|No.|Color|Part no.|Part name"
@@ -2871,7 +2884,7 @@ BEGIN
     IDS_ERROR_RECOVER       "Recovery of the original project failed!"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EXTRAS_GENERATORS_RUBBERBELT 
                             "Generate a rubber belt.\nRubber Belt Generator..."
@@ -2893,7 +2906,7 @@ BEGIN
     ID_VIEW_PANECOORDINATES "Show or hide the pane coordinates\nView pane coordinates"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_REPORT_FILTER       "Text Files (*.txt)|*.txt|Text Files (*.csv)|*.csv|All Files (*.*)|*.*||"
     IDS_MSG_NONEWPARTS      "There are no new or changed parts!"
@@ -2905,72 +2918,55 @@ BEGIN
     IDS_RECURSION_ERROR     "ERROR: Recursion of %s - Load aborted!\n"
 END
 
-#endif    // Englisch (USA) resources
+#endif    // Español resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// Deutsch (Österreich) resources
+// Inglés (Estados Unidos) resources
 
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEA)
-#ifdef _WIN32
-LANGUAGE LANG_GERMAN, SUBLANG_GERMAN_AUSTRIAN
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// Dialog
-//
-
-IDD_DIALOG_CONFIG_TREE DIALOG  0, 0, 297, 175
-STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Parts Tree Configuration"
-FONT 8, "MS Sans Serif"
-BEGIN
-    DEFPUSHBUTTON   "OK",IDOK,5,155,50,14
-    PUSHBUTTON      "Cancel",IDCANCEL,240,155,50,14
-    CONTROL         "List1",IDC_GROUPS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,5,20,227,107
-    LTEXT           "Tree and search strings (Display order)",IDC_STATIC,5,10,122,8
-    EDITTEXT        IDC_NAME,30,134,95,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_RULE,195,134,95,14,ES_AUTOHSCROLL
-    LTEXT           "Name:",IDC_STATIC,5,137,22,8
-    LTEXT           "Search string:",IDC_STATIC,148,137,44,8
-    PUSHBUTTON      "Move up",IDC_VIEW_UP,240,20,50,14
-    PUSHBUTTON      "Move down",IDC_VIEW_DOWN,240,40,50,14
-    PUSHBUTTON      "Delete",IDC_DELETE,240,79,50,14
-END
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// DESIGNINFO
-//
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
-BEGIN
-    IDD_DIALOG_CONFIG_TREE, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 290
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 168
-    END
-END
-#endif    // APSTUDIO_INVOKED
-
-
 /////////////////////////////////////////////////////////////////////////////
 //
-// Icon
+// TEXTINCLUDE
 //
 
-// Icon with lowest ID value placed first to ensure application icon
-// remains consistent on all systems.
-IDI_MAILTO              ICON                    "res\\icon1.ico"
-IDI_HTTP                ICON                    "res\\ico00001.ico"
-#endif    // Deutsch (Österreich) resources
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\LegoCAD.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Inglés (Estados Unidos) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
