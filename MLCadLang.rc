@@ -85,10 +85,10 @@ BEGIN
     PUSHBUTTON      "M",ID_EDIT_PARTCOLOR,5,245,10,10
 END
 
-IDD_ABOUTBOX DIALOG 0, 0, 235, 141
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 141
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "About MLCad"
-FONT 8, "MS Sans Serif"
+CAPTION "Acerca de MLCad"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
     LTEXT           "MLCad Version",IDC_VERSIONSTRING,9,10,136,8,SS_NOPREFIX
     LTEXT           "Copyright © 1999-2004  by Michael Lachmann",IDC_STATIC,10,30,215,8
@@ -98,14 +98,14 @@ BEGIN
     LTEXT           "http://www.lm-software.com/mlcad/",IDC_URL,55,90,116,8
     ICON            IDI_MAILTO,IDC_MAIL1,25,60,20,20
     ICON            IDI_HTTP,IDC_URL1,25,86,20,20
-    GROUPBOX        "Contact",IDC_STATIC,10,45,205,70
+    GROUPBOX        "Contacto",IDC_STATIC,10,45,205,70
 END
 
-CG_IDD_PROGRESS DIALOG 0, 0, 186, 79
+CG_IDD_PROGRESS DIALOGEX 0, 0, 186, 79
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
-    DEFPUSHBUTTON   "Cancel",IDCANCEL,67,58,50,14
+    DEFPUSHBUTTON   "Cancelar",IDCANCEL,67,58,50,14
     CONTROL         "Progress1",CG_IDC_PROGDLG_PROGRESS,"msctls_progress32",WS_BORDER,15,34,154,13
     LTEXT           " 0 %",CG_IDC_PROGDLG_PERCENT,85,23,18,8
     LTEXT           "",CG_IDC_PROGDLG_STATUS,13,7,158,8
@@ -1757,11 +1757,11 @@ IDR_MAINFRAME MENU
 BEGIN
     POPUP "&File"
     BEGIN
-        MENUITEM "&New\tCtrl+N",              ID_FILE_NEW
-        MENUITEM "&Open...\tCtrl+O",           ID_FILE_OPEN
-        MENUITEM "&Save\tCtrl+S",            ID_FILE_SAVE
-        MENUITEM "Save &As...",            ID_FILE_SAVE_AS
-        MENUITEM "&Export...",                ID_FILE_EXPORT
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "&Export...",                  ID_FILE_EXPORT
         MENUITEM "Save &Image(s)...",           ID_FILE_SAVEPICTURES
         MENUITEM "Save Parts &List...",         ID_FILE_SAVEPARTLIST
         MENUITEM "Re&vert",                     ID_FILE_REVERT
@@ -1774,7 +1774,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
         MENUITEM SEPARATOR
-        MENUITEM "E&xit",                      ID_APP_EXIT
+        MENUITEM "E&xit",                       ID_APP_EXIT
     END
     POPUP "&Edit"
     BEGIN
@@ -2413,6 +2413,22 @@ BEGIN
 0x7453, 0x6172, 0x6769, 0x7468, "\000" 
     IDC_TYPE, 0x403, 7, 0
 0x6943, 0x6372, 0x656c, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+CG_IDD_PROGRESS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
     0
 END
 
